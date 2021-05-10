@@ -1,0 +1,6 @@
+{
+    "require": {
+        "nesbot/carbon": "^2.47",
+        "league/csv": "^9.7"
+    }
+}
