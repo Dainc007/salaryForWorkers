@@ -6,11 +6,13 @@ use Carbon\CarbonImmutable;
 use League\Csv\Writer;
 
 $carbon = new CarbonImmutable();
+CarbonImmutable::setLocale('pl');
+
 $date = $carbon->now();
 $year = $date->year;
 
 $csv = Writer::createFromPath(__DIR__ . '/salary.csv', 'w');
-$header = ['month', 'payday', 'bonus_payday'];
+$header = ['miesiąc', 'dni wypłaty pensji', 'dni wypłaty premii'];
 $csv->insertOne($header);
 
 while ($date->year === $year) {
